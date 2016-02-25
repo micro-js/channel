@@ -1,0 +1,18 @@
+{
+  "name": "@f/channel",
+  "description": "Simple CSP channel implemented with promises.",
+  "repository": "git://github.com/micro-js/channel.git",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "scripts": {
+    "postversion": "git push && git push --tags && npm publish --access=public"
+  },
+  "dependencies": {
+    "@f/defer-promise": "^1.0.0",
+    "@f/foreach": "^1.2.2"
+  },
+  "devDependencies": {
+    "tape": "^4.2.2"
+  }
+}
