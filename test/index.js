@@ -110,3 +110,14 @@ test('parked take should return CLOSED if channel is then closed', function (t) 
     t.equal(val, CLOSED)
   })
 })
+
+
+test('buffered should drop old puts', function (t) {
+  t.plan(1)
+  var ch = channel(1)
+  ch.put(42)
+  ch.put(43)
+  ch.take().then(function (val) {
+    t.equal(val, 43)
+  })
+})
